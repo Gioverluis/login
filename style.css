@@ -5,6 +5,7 @@
   --accent: #1b59e0;
 }
 
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -19,11 +20,12 @@ img {
   position: relative;
   left: 113px;
   bottom: 13px;
+  border-radius: 8px;
 }
 
 .login-container {
   width: 360px;
-  background: #A6A6A6;
+  background: #ad6200;
   padding: 28px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(20,20,40,0.06);
@@ -33,7 +35,7 @@ img {
 h2 { 
   margin: 0 0 18px; 
   text-align: center; 
-  color: #0609E8; 
+  color: #ffff00ff; 
   ;
 }
 
@@ -53,26 +55,27 @@ input {
 
 }
 button {
+  font-size: 18px;
   margin-top: 18px;
   width: 100%;
   padding: 12px;
   border-radius: 8px;
   border: none;
-  background: #0609E8;
-  color: white;
+  background: #ffff00ff;
+  color: #ff0000ff;
   font-weight: 600;
   cursor: pointer;
 }
 .registro {
   display: inline;
   text-align: center;
-  color: blue;
+  color: #ffff00ff;
   height: 55px;
   width: 150px;
   position: relative;
   top: 20px;
   left: 30%;
-  background: #A6A6A6;
+  background: #ad6200;
   font-size: 20px;
 }
 button:active { 
