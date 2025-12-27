@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h2>Panel</h2>
+    <div id="content">Cargando...</div>
+    <button id="logout" style="margin-top:16px;">Cerrar sesión</button>
+  </div>
+
+  <script>
+    const content = document.getElementById('content');
+    const logout = document.getElementById('logout');
+
+    async function loadMe() {
+      const token = localStorage.getItem('access_token');
+      if (!token) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      try {
+        const resp = await fetch('http://127.0.0.1:8000/me', {
+          headers: {
+            'Authorization': 'Bearer ' + token
+          }
+        });
+
+        if (!resp.ok) {
+          // Token inválido o caducado
+          localStorage.removeItem('access_token');
+          window.location.href = 'index.html';
+          return;
+        }
+
+        const user = await resp.json();
+        content.innerHTML = `
+          <p><strong>ID:</strong> ${user.id}</p>
+          <p><strong>Usuario:</strong> ${user.username}</p>
+          <p><strong>Email:</strong> ${user.email || '-'}</p>
+        `;
+      } catch (err) {
+        content.textContent = 'Error al comunicarse con el servidor';
+      }
+    }
+
+    logout.addEventListener('click', () => {
+      localStorage.removeItem('access_token');
+      window.location.href = 'index.html';
+    });
+
+    loadMe();
+  </script>
+</body>
+</html>
