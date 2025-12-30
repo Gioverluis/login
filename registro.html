@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="registro-portal">
+
+    <img  src="img/logo.svg" width="70" alt="Logo" >
+    <h2>Registro</h2>
+    <form id="loginForm" >
+        <label for="email">Email</label>
+        <input placeholder="Introduce el email" id="email" name="email" type="email" required />
+
+
+        <label for="username">Usuario</label>
+        <input placeholder="Introduce nombre ususario" id="username" name="username" type="text" required />
+
+        <label for="password">Contraseña</label>
+        <input placeholder="Introduce una Contraseña" id="password" name="password" type="password" required />
+
+        <label for="password"> Confirmar Contraseña</label>
+        <input placeholder="Introduce nuevamente la Contraseña" id="password" name="password" type="password" required />
+        
+        <label for="marcar"> Estoy de acuerdo con la <a href="#">Politica de privacidad</a> </label>
+        <input  id="marcar" name="#" type="checkbox" required />
+
+        <button type="submit">Registrarse</button>
+        <button  class="registro" type="button">Iniciar Seccion</button>
+
+        
+        <!--  Revision 
+        <ul>
+        <li>
+          <a class="" href="#">Registro</a>
+        </li> 
+      </ul>
+      -->
+      <p id="message" class="message"></p>
+    </form>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@
 
 * { box-sizing: border-box; }
 body {
-  margin: 0;
+  margin: 10px;
   font-family: Inter, Arial, sans-serif;
   background: var(--bg);
   height: 100vh;
@@ -17,19 +17,28 @@ body {
 }
 
 img {
+  
   position: relative;
-  left: 113px;
+  left: 150px;
   bottom: 13px;
   border-radius: 8px;
 }
 
 .login-container {
-  width: 360px;
+  width: 440px;
   background: #ad6200;
   padding: 28px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(20,20,40,0.06);
- 
+  
+}
+
+.registro-portal {
+  width: 440px;
+  background: #ad6200;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(20,20,40,0.06);
 }
 
 h2 { 
